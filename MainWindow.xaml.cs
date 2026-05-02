@@ -1,13 +1,7 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using pr33.Models;
+using pr33.Pages;
 
 namespace pr33
 {
@@ -16,9 +10,24 @@ namespace pr33
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary> Статический экземпляр главного окна </summary>
+        public static MainWindow Instance;
+
+        /// <summary> Авторизованный пользователь </summary>
+        public Users LoginUser { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            Instance = this;
+            // При загрузке окна открываем страницу логина
+            OpenPages(new Login());
+        }
+
+        /// <summary> Открытие страницы </summary>
+        public void OpenPages(Page page)
+        {
+            frame.Navigate(page);
         }
     }
 }

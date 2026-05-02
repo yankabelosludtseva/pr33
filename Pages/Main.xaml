@@ -9,59 +9,40 @@
       Title="Main">
 
     <Grid Background="White">
-        <!-- Верхняя панель -->
         <Grid Background="#ff0071ff" Height="50" VerticalAlignment="Top">
-            <Grid>
-                <Image Margin="10" Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Source="/Images/logo.png"/>
-                <Label Content="BΠaT`e" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50, 5, 0, 0" 
-                       Foreground="White" FontWeight="Bold" FontSize="20"/>
-            </Grid>
+            <Image Margin="10" Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Source="/Images/logo.png"/>
+            <Label Content="ВПат`е" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,5,0,0"
+                   Foreground="White" FontWeight="Bold" FontSize="20"/>
         </Grid>
-
-        <!-- Основная область контента -->
-        <Grid Margin="0, 50, 0, 0">
+        <Grid Margin="0,50,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="250"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-
-            <!-- Левая панель: Список пользователей -->
             <ScrollViewer VerticalScrollBarVisibility="Hidden">
                 <StackPanel x:Name="ParentUsers">
-                    <!-- Сюда будут динамически добавляться элементы списка пользователей -->
+
                 </StackPanel>
             </ScrollViewer>
-
-            <!-- Правая панель: Чат -->
             <Grid Grid.Column="1" x:Name="Chat" Visibility="Hidden">
                 <Grid Height="50" VerticalAlignment="Top">
-                    <!-- Аватарка собеседника -->
-                    <Image x:Name="imgUser" Margin="10, 0, 0, 0" Width="30" Height="30" HorizontalAlignment="Left" 
+                    <Image x:Name="imgUser" Margin="10,0,0,0" Width="30" Height="30" HorizontalAlignment="Left"
                            Source="/Images/ic-user.png">
                         <Image.Clip>
                             <RectangleGeometry RadiusX="15" RadiusY="15" Rect="0,0,30,30"/>
                         </Image.Clip>
                     </Image>
-
-                    <!-- Индикатор онлайн -->
-                    <Image Width="10" Height="10" Margin="30, 30, 0, 0" HorizontalAlignment="Left" 
+                    <Image Width="10" Height="10" Margin="30,30,0,0" HorizontalAlignment="Left"
                            Source="/Images/ic-online.png" Visibility="Hidden"/>
-
-                    <!-- ФИО собеседника -->
-                    <Label x:Name="FIO" Content="Иванов Иван Иванович" Margin="45, 0, 0, 0" 
+                    <Label x:Name="FIO" Content="Иванов Иван Иванович" Margin="45,0,0,0"
                            VerticalAlignment="Top" FontWeight="Bold" FontSize="10"/>
                 </Grid>
-
-                <!-- Область сообщений -->
                 <ScrollViewer Margin="0,50,0,50">
                     <StackPanel x:Name="ParentMessages">
-                        <!-- Сюда будут динамически добавляться сообщения -->
+
                     </StackPanel>
                 </ScrollViewer>
-
-                <!-- Поле ввода сообщения -->
-                <TextBox x:Name="Message" Height="35" VerticalContentAlignment="Center" Margin="10,0,10,10" 
-                         TextWrapping="Wrap" VerticalAlignment="Bottom" KeyUp="Send" Grid.Column="1"/>
+                <TextBox x:Name="Message" Height="35" VerticalContentAlignment="Center" Margin="10,0,10,10" TextWrapping="Wrap" VerticalAlignment="Bottom" KeyUp="Send" Grid.Column="1"/>
             </Grid>
         </Grid>
     </Grid>

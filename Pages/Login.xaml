@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Login">
     <Grid Background="#ff0071ff">
-        <Grid HorizontalAlignment="Right" Width="200" Background="#B2FFFFFF">
+        <Grid HorizontalAlignment="Right" Width="200" Background="#b2ffffff">
             <Image x:Name="imgUser" Source="/Images/logo.png" Width="100" Height="100"
                    VerticalAlignment="Top" Margin="0,50,0,0" StretchDirection="Both" Stretch="UniformToFill">
                 <Image.Clip>
@@ -22,10 +22,8 @@
             <Label Content="Отчество:" VerticalAlignment="Top" Margin="10,270,10,0"/>
             <TextBox x:Name="Surname" Height="25" Margin="10,295,10,0" VerticalAlignment="Top" BorderBrush="Black"/>
             <Label Content="Фотография:" VerticalAlignment="Top" Margin="10,325,10,0"/>
-            <Button Click="SelectPhoto" Content="Выбрать фото" Height="25" Margin="10,350,10,0" VerticalAlignment="Top"
-                    Background="White" BorderBrush="Black"/>
-            <Button Click="Continue" Content="Продолжить" Height="25" Margin="10,0,10,10" VerticalAlignment="Bottom"
-                    Background="White" BorderBrush="Black"/>
+            <Button Click="SelectPhoto" Content="Выбрать фото" Height="25" Margin="10,350,10,0" VerticalAlignment="Top" BorderBrush="Black" Background="White"/>
+            <Button Click="Continue" Content="Продолжить" Height="25" Margin="10,0,10,10" VerticalAlignment="Bottom" BorderBrush="Black" Background="White"/>
         </Grid>
     </Grid>
 </Page>

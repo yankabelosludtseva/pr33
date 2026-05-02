@@ -9,6 +9,7 @@ namespace pr33.Classes.Common
         /// </summary>
         public static BitmapImage LoadImage(byte[] imageData)
         {
+
             BitmapImage Image = new BitmapImage();
             using (var Stream = new MemoryStream(imageData))
             {

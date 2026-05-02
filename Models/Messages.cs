@@ -1,6 +1,6 @@
 ﻿namespace pr33.Models
 {
-    class Messages
+    public class Messages
     {
         /// <summary> Код сообщения
         /// </summary>
